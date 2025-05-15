@@ -8,13 +8,14 @@
     body {
       font-family: Arial, sans-serif;
       margin: 0;
-      background-color: #f5f5f5;
-      color: #333;
+      background-color: #0000FF;
+      color: #000000;
     }
     header {
       background-color: #dcdcdc;
       padding: 3rem 2rem;
       text-align: center;
+      position: relative;
     }
     header h1 {
       font-size: 2.5rem;
@@ -22,6 +23,15 @@
     }
     header p {
       font-size: 1.2rem;
+    }
+    .header-image {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      width: 100px;
+      height: auto;
+      border-radius: 5px;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
     }
     section {
       padding: 2rem;
@@ -42,6 +52,12 @@
     .contact {
       text-align: center;
       margin-top: 2rem;
+      display: flex; /* Enable flexbox for the contact section */
+      flex-direction: column; /* Stack items vertically by default */
+      align-items: center; /* Center items horizontally */
+    }
+    .contact p {
+      margin-bottom: 1rem;
     }
     .contact a {
       text-decoration: none;
@@ -73,18 +89,17 @@
   </style>
 </head>
 <body>
-  <header>
+  <header style="position: relative;">
     <h1>Taylar Delisle, Psychotherapist MHC-LP</h1>
     <p>Licensed Mental Health Counselor</p>
+    <img src="images/profile.jpg" alt="Profile picture of Taylar Delisle" class="header-image">
   </header>
-
   <section>
     <h2>Welcome</h2>
     <p>
       I'm Taylar Delisle, a licensed mental health counselor committed to helping individuals and couples navigate challenges and create meaningful change. My approach is warm, supportive, and rooted in evidence-based practices.
     </p>
   </section>
-
   <section class="services">
     <h2>Services</h2>
     <ul>
@@ -95,18 +110,15 @@
       <li>Mindfulness & Emotional Wellness</li>
     </ul>
   </section>
-
   <section class="contact">
     <h2>Contact</h2>
     <p>Email: <a href="mailto:delisletaylar@gmail.com">delisletaylar@gmail.com</a></p>
     <a href="mailto:delisletaylar@gmail.com">Schedule a Consultation</a>
   </section>
-
   <section class="book-now">
     <h2>Book an Appointment</h2>
     <a href="https://calendly.com/taylardelisle" target="_blank">Book Now</a>
   </section>
-
   <footer>
     &copy; 2025 Taylar Delisle, LMHC. All rights reserved.
   </footer>
